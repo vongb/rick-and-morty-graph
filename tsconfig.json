@@ -1,0 +1,8 @@
+{
+  "extends": "tsconfig-seek",
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    // Override certain options on a project-by-project basis.
+    "module": "es2015"
+  }
+}
