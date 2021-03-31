@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "jest --watch"
+  },
   "dependencies": {
     "apollo-server-koa": "^2.22.2",
     "graphql": "^15.5.0",
