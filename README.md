@@ -6,3 +6,5 @@ Personal project to learn GraphQL. This project is written in TypeScript` and us
 
 - Clone and do a `yarn`.
 - Run `yarn start`
+
+I have no idea what else to put here... 🤷
