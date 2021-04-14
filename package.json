@@ -4,7 +4,7 @@
     "start": "nodemon -e ts,js --exec 'ts-node' --watch src/server.ts src/index.ts | pino-pretty --colorize --timestampKey=_timestamp"
   },
   "dependencies": {
-    "apollo-server-koa": "2.22.2",
+    "apollo-server-koa": "2.23.0",
     "graphql": "15.5.0",
     "pino": "6.11.2"
   },
