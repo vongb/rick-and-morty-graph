@@ -6,7 +6,7 @@
   "dependencies": {
     "apollo-server-koa": "2.22.2",
     "graphql": "15.5.0",
-    "pino": "6.11.2"
+    "pino": "6.11.3"
   },
   "devDependencies": {
     "eslint": "7.23.0",
