@@ -3,7 +3,7 @@ import { gql } from 'apollo-server-koa';
 export const typeDefs = gql`
   type Query {
     characters: [Character]
-    character: Character
+    character(id: String!): Character
   }
 
   type Character {
