@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import { Character } from '../types/types';
+import { CHARACTERS_URL } from '../helpers/url';
 
 export const resolvers = {
   Query: {
@@ -14,14 +14,16 @@ export const resolvers = {
       // future
       // dataSource.rickAndMortyAPI.getCharacter(args.id);
 
-      // axios, fetch, node-fetch
-      const { data } = await axios.get(
-        `https://rickandmortyapi.com/api/character/${id}`,
-      );
+      const { data } = await axios.get(`${CHARACTERS_URL}/${id}`);
       // eslint-disable-next-line no-console
       console.log(data);
 
       return data;
+    },
+    allCharacters: async (_parent: any, _args: any, {}: any) => {
+      const { data } = await axios.get(`${CHARACTERS_URL}`);
+
+      return data.results;
     },
   },
 };
