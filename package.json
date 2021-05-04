@@ -5,7 +5,7 @@
     "dontrunthis": "--watch 'src/**' --ext 'ts,json' --exec 'ts-node src/server.ts src/index.ts' | pino-pretty --colorize --timestampKey=_timestamp"
   },
   "dependencies": {
-    "apollo-server-koa": "2.23.0",
+    "apollo-server-koa": "2.24.0",
     "axios": "0.21.1",
     "graphql": "15.5.0",
     "pino": "6.11.3"
