@@ -1,11 +1,24 @@
 import axios from 'axios';
-import { CHARACTERS_URL } from '../helpers/url';
+import { CHARACTERS_URL } from '../../helpers/url';
+
+export interface Character {
+  id: number;
+  name: string;
+  status: string;
+  species?: string;
+  type?: string;
+  gender: string;
+  image?: string;
+  url?: string;
+  created: string;
+  location: Location;
+  episode: Array<Episode>;
+}
 
 export const resolvers = {
   Query: {
     // root level query
     character: async (
-      // qweqw
       // find docs on this on apollo
       _parent: Record<string, unknown>,
       { id }: { id: string },
