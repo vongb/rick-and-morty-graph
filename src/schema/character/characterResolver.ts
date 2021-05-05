@@ -1,19 +1,6 @@
 import axios from 'axios';
 import { CHARACTERS_URL } from '../../helpers/url';
-
-export interface Character {
-  id: number;
-  name: string;
-  status: string;
-  species?: string;
-  type?: string;
-  gender: string;
-  image?: string;
-  url?: string;
-  created: string;
-  location: Location;
-  episode: Array<Episode>;
-}
+import { fetchCharacter } from './datasource';
 
 export const resolvers = {
   Query: {
@@ -24,14 +11,9 @@ export const resolvers = {
       { id }: { id: string },
       {}: any, // Context, headers, x-requestid, data-sources
     ) => {
-      // future
-      // dataSource.rickAndMortyAPI.getCharacter(args.id);
+      const character = await fetchCharacter(id);
 
-      const { data } = await axios.get(`${CHARACTERS_URL}/${id}`);
-      // eslint-disable-next-line no-console
-      console.log(data);
-
-      return data;
+      return character;
     },
     allCharacters: async (_parent: any, _args: any, {}: any) => {
       const { data } = await axios.get(`${CHARACTERS_URL}`);
